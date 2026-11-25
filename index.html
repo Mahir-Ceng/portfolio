@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mahir-Ceng | Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Mahir, a Computer Engineering graduate passionate about software development, Python and web projects.">
+    <meta name="author" content="Mahir-Ceng">
+    <meta name="theme-color" content="#080b14">
+
+    <!-- Open Graph (link previews) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mahir-Ceng | Developer Portfolio">
+    <meta property="og:description" content="Computer Engineering graduate building creative software projects.">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23080b14'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%2300e5ff'%3EM%3C/text%3E%3C/svg%3E">
+
+    <!-- Apply the saved theme before the page paints (prevents a flash) -->
+    <script>
+        try {
+            var savedTheme = localStorage.getItem("theme");
+            if (!savedTheme && window.matchMedia("(prefers-color-scheme: light)").matches) {
+                savedTheme = "light";
+            }
+            document.documentElement.dataset.theme = savedTheme || "dark";
+        } catch (e) {
+            document.documentElement.dataset.theme = "dark";
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#home" class="logo">Mahir<span>-Ceng.</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button type="button" class="icon-btn" id="themeToggle"
+                        aria-label="Switch to light theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+                    </svg>
+                </button>
+
+                <button type="button" class="icon-btn nav-toggle" id="navToggle"
+                        aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <!-- ================= HOME ================= -->
+        <section id="home" class="hero">
+            <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+
+            <div class="profile-avatar">
+                <img src="images/profile.jpg" alt="Mahir profile photo"
+                     width="170" height="170" decoding="async" fetchpriority="high">
+            </div>
+
+            <p class="subtitle">COMPUTER ENGINEERING</p>
+
+            <h1>
+                Hi, I'm <span>Mahir.</span>
+                <br>
+                Future <span id="typingText">Software Developer.</span>
+            </h1>
+
+            <p class="description">
+                I'm passionate about software development,
+                building creative projects and learning new technologies.
+            </p>
+
+            <div class="profile-buttons">
+                <a href="#projects" class="button">Explore My Projects →</a>
+                <a href="#contact" class="secondary-button">Contact Me</a>
+                <!-- Put your CV at cv/Mahir-CV.pdf (or change the path) -->
+                <a href="cv/Mahir-CV.pdf" class="secondary-button" download>Download CV</a>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="about-section">
+
+            <div class="about-content">
+                <p class="section-subtitle">GET TO KNOW ME</p>
+                <h2>About <span>Me</span></h2>
+
+                <p class="about-text">
+                    Hello! I'm Mahir, a Computer Engineering graduate
+                    with a passion for software development.
+                    I enjoy learning new technologies, solving problems
+                    and turning ideas into real-world applications.
+                    My goal is to become a skilled software developer
+                    and build meaningful digital products.
+                </p>
+
+                <a href="#projects" class="button">Discover My Work →</a>
+            </div>
+
+            <div class="about-info">
+                <div class="info-card">
+                    <span class="info-number">01</span>
+                    <h3>Problem Solving</h3>
+                    <p>I enjoy analysing problems and finding solutions.</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-number">02</span>
+                    <h3>Continuous Learning</h3>
+                    <p>I'm always exploring new technologies.</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-number">03</span>
+                    <h3>Building Projects</h3>
+                    <p>I turn what I learn into practical projects.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= SKILLS ================= -->
+        <section id="skills" class="skills-section">
+
+            <div class="section-head">
+                <p class="section-subtitle">MY TECHNICAL SKILLS</p>
+                <h2>Skills &amp; <span>Technologies</span></h2>
+                <p class="section-intro">
+                    Technologies I'm learning and using to build projects.
+                </p>
+            </div>
+
+            <!-- Adjust each --level value to match your real confidence -->
+            <div class="skills-container">
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" width="36" height="36" loading="lazy">
+                    </div>
+                    <h3>Python</h3>
+                    <p>Programming</p>
+                    <div class="skill-bar" style="--level: 70%" role="img" aria-label="Python level: 70 percent"><span></span></div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" width="36" height="36" loading="lazy">
+                    </div>
+                    <h3>HTML</h3>
+                    <p>Web Structure</p>
+                    <div class="skill-bar" style="--level: 80%" role="img" aria-label="HTML level: 80 percent"><span></span></div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" width="36" height="36" loading="lazy">
+                    </div>
+                    <h3>CSS</h3>
+                    <p>Web Design</p>
+                    <div class="skill-bar" style="--level: 75%" role="img" aria-label="CSS level: 75 percent"><span></span></div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" width="36" height="36" loading="lazy">
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Web Development</p>
+                    <div class="skill-bar" style="--level: 60%" role="img" aria-label="JavaScript level: 60 percent"><span></span></div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" width="36" height="36" loading="lazy">
+                    </div>
+                    <h3>Git</h3>
+                    <p>Version Control</p>
+                    <div class="skill-bar" style="--level: 65%" role="img" aria-label="Git level: 65 percent"><span></span></div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img class="invert-on-dark" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" width="36" height="36" loading="lazy">
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Code Hosting</p>
+                    <div class="skill-bar" style="--level: 65%" role="img" aria-label="GitHub level: 65 percent"><span></span></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= PROJECTS ================= -->
+        <section id="projects" class="projects-section">
+
+            <div class="section-head">
+                <p class="section-subtitle">MY RECENT WORK</p>
+                <h2>Featured <span>Projects</span></h2>
+                <p class="section-intro">Here are some of the projects I've built.</p>
+            </div>
+
+            <div class="project-container">
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-tag">PYTHON</span>
+                        <span class="project-number">01</span>
+                    </div>
+
+                    <h3>Professional Calculator</h3>
+
+                    <p>
+                        A Python command-line calculator featuring
+                        mathematical operations and calculation history.
+                    </p>
+
+                    <ul class="project-tech" aria-label="Technologies used">
+                        <li>Python</li>
+                        <li>Git</li>
+                    </ul>
+
+                    <a href="https://github.com/Mahir-Ceng/professional-calculator"
+                       target="_blank" rel="noopener noreferrer" class="project-link">
+                        View on GitHub →
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-tag">WEB DEVELOPMENT</span>
+                        <span class="project-number">02</span>
+                    </div>
+
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        A personal developer portfolio built with
+                        HTML, CSS and JavaScript.
+                    </p>
+
+                    <ul class="project-tech" aria-label="Technologies used">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+
+                    <!-- Replace with the exact repository URL of this portfolio -->
+                    <a href="https://github.com/Mahir-Ceng"
+                       target="_blank" rel="noopener noreferrer" class="project-link">
+                        View on GitHub →
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ================= JOURNEY ================= -->
+        <section id="journey" class="journey-section">
+
+            <div class="section-head">
+                <p class="section-subtitle">MY PATH SO FAR</p>
+                <h2>My <span>Journey</span></h2>
+                <p class="section-intro">The steps that shaped me as a developer.</p>
+            </div>
+
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <span class="timeline-tag">GRADUATED</span>
+                    <h3>Computer Engineering degree</h3>
+                    <p>Completed my degree and built a foundation in programming, algorithms and software engineering.</p>
+                </li>
+
+                <li class="timeline-item">
+                    <span class="timeline-tag">PYTHON &amp; GIT</span>
+                    <h3>First real projects</h3>
+                    <p>Built command-line tools in Python and learned to manage them with Git and GitHub.</p>
+                </li>
+
+                <li class="timeline-item">
+                    <span class="timeline-tag">WEB</span>
+                    <h3>Web development</h3>
+                    <p>Learned HTML, CSS and JavaScript and created this portfolio.</p>
+                </li>
+
+                <li class="timeline-item">
+                    <span class="timeline-tag">NEXT</span>
+                    <h3>Bigger challenges</h3>
+                    <p>Exploring larger projects, new frameworks and job opportunities in software development.</p>
+                </li>
+            </ol>
+
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="contact-section">
+
+            <div class="section-head">
+                <p class="section-subtitle">GET IN TOUCH</p>
+                <h2>Let's <span>Connect</span></h2>
+                <p class="section-intro">
+                    Have a project idea or an opportunity?
+                    Feel free to get in touch with me.
+                </p>
+            </div>
+
+            <div class="contact-container">
+
+                <div class="contact-info">
+                    <h3>Let's Talk!</h3>
+
+                    <p>
+                        I'm always open to discussing new projects,
+                        creative ideas and opportunities.
+                    </p>
+
+                    <div class="contact-item">
+                        <span>Email</span>
+                        <a href="mailto:suleymanmahir52@gmail.com">suleymanmahir52@gmail.com</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>GitHub</span>
+                        <a href="https://github.com/Mahir-Ceng"
+                           target="_blank" rel="noopener noreferrer">
+                            github.com/Mahir-Ceng
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" novalidate>
+
+                    <label class="visually-hidden" for="name">Your name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name"
+                           autocomplete="name" required>
+
+                    <label class="visually-hidden" for="email">Your email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email"
+                           autocomplete="email" required>
+
+                    <label class="visually-hidden" for="message">Your message</label>
+                    <textarea id="message" name="message" placeholder="Your Message"
+                              rows="5" required></textarea>
+
+                    <button type="submit" class="button" id="submitBtn">Send Message →</button>
+
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <a href="#home" class="footer-logo">Mahir<span>-Ceng.</span></a>
+
+        <p>Building my future, one line of code at a time.</p>
+
+        <div class="social-links">
+            <a href="https://github.com/Mahir-Ceng" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:suleymanmahir52@gmail.com">Email</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year">2026</span> Mahir-Ceng. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
