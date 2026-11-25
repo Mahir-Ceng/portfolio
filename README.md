@@ -41,7 +41,7 @@ A personal developer portfolio built with plain HTML, CSS and JavaScript. No fra
 
 1. Clone the repository:
    ```bash
-   git clone https://mahir-ceng.github.io/portfolio/
+   https://mahir-ceng.github.io/portfolio/
 2. Open `index.html` in your browser.
 
 ## Customize
