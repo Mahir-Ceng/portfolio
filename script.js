@@ -14,7 +14,7 @@
     // To receive messages directly, create a free form at https://formspree.io
     // and paste its endpoint here, e.g. "https://formspree.io/f/xxxxxxxx".
     // While empty, the form opens the visitor's email app instead.
-    const FORM_ENDPOINT = "";
+    const FORM_ENDPOINT = "https://formspree.io/f/xljbayya";
     const CONTACT_EMAIL = "suleymanmahir52@gmail.com";
 
     /* ==========================================
