@@ -3,7 +3,7 @@
 A personal developer portfolio built with plain HTML, CSS and JavaScript. No frameworks, no build step: open `index.html` and it works.
 
 <!-- After enabling GitHub Pages, add your live link here:
-**Live site:** https://mahir-ceng.github.io/portfolio/
+**Live site:** https://github.com/Mahir-Ceng/portfolio
 -->
 
 ## Features
