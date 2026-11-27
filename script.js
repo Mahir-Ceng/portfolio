@@ -316,9 +316,9 @@
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance < 150 && distance > 0) {
-                    const force = (150 - distance) / 100;
-                    p.x += (dx / distance) * force * 5;
-                    p.y += (dy / distance) * force * 5;
+                    const force = (150 - distance) / 150;
+                    p.x += (dx / distance) * force * 10;
+                    p.y += (dy / distance) * force * 10;
                 }
             }
 
