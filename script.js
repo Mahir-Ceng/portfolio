@@ -290,8 +290,8 @@
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 size: Math.random() * 2 + 1,
-                speedX: (Math.random() - 0.5) * 0.6,
-                speedY: (Math.random() - 0.5) * 0.6
+                speedX: (Math.random() - 0.5) * 5,
+                speedY: (Math.random() - 0.5) * 5,
             });
         }
     }
@@ -317,8 +317,8 @@
 
                 if (distance < 150 && distance > 0) {
                     const force = (150 - distance) / 100;
-                    p.x += (dx / distance) * force * 15;
-                    p.y += (dy / distance) * force * 15;
+                    p.x += (dx / distance) * force * 5;
+                    p.y += (dy / distance) * force * 5;
                 }
             }
 
