@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-
-
-
 <html lang="en" dir="ltr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +14,7 @@
     <meta property="og:title" content="Mahir-Ceng | Developer Portfolio" data-i18n-content="documentTitle">
     <meta property="og:description" content="Computer Engineering graduate building creative software projects." data-i18n-content="ogDescription">
 
-    <script type="text/javascript" nonce="59c9cdce881e4756b22e4326fce" src="//local.adguard.org?ts=1795788154608&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000f3e48210b6c9c3b27a8c9ce3%26fn%3Dindex%25281%2529.html%26cd%3Dattachment%26ts%3D498830%26p%3Dfs%26cid%3D1%26sig%3Dba9d43863c2e4b7875cb0e74cca4d91eb90e1ec267162278834a53271145742e%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="59c9cdce881e4756b22e4326fce" src="//local.adguard.org?ts=1795788154608&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23080b14'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%2300e5ff'%3EM%3C/text%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23080b14'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%2300e5ff'%3EM%3C/text%3E%3C/svg%3E">
 
     <!-- Apply the saved theme before the page paints (prevents a flash) -->
     <script>
@@ -108,8 +105,14 @@
             <div class="profile-buttons">
                 <a href="#projects" class="button" data-i18n="exploreProjects">Explore My Projects →</a>
                 <a href="#contact" class="secondary-button" data-i18n="contactMe">Contact Me</a>
-                <!-- Put your CV at cv/Mahir-CV.pdf (or change the path) -->
-                <a href="cv/Mahir-CV.pdf" class="secondary-button" download data-i18n="downloadCV">Download CV</a>
+                <button type="button"
+                        class="secondary-button cv-download-trigger"
+                        id="cvDownloadToggle"
+                        aria-haspopup="dialog"
+                        aria-controls="cvDownloadDialog"
+                        data-i18n="downloadCV">
+                    Download CV
+                </button>
             </div>
         </section>
 
@@ -407,6 +410,69 @@
     </footer>
 
     <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" data-i18n-aria-label="backToTop">↑</button>
+
+    <!-- CV language selection dialog -->
+    <dialog class="cv-dialog" id="cvDownloadDialog" aria-labelledby="cvDialogTitle">
+        <div class="cv-dialog-content">
+            <button type="button"
+                    class="cv-dialog-close"
+                    id="cvDialogClose"
+                    aria-label="Close dialog"
+                    data-i18n-aria-label="closeDialog">&times;</button>
+
+            <p class="cv-dialog-subtitle" data-i18n="cvDialogEyebrow">MY RESUME</p>
+            <h2 id="cvDialogTitle" data-i18n="cvDialogTitle">Choose Your CV</h2>
+            <p class="cv-dialog-description" data-i18n="cvDialogDescription">
+                Select the language of your resume.
+            </p>
+
+            <div class="cv-options">
+                <!-- ARABIC CV -->
+<a href="cv/Mahir-CV-AR.pdf"
+   class="cv-option"
+   download="Mahir-CV-AR.pdf">
+
+    <span class="cv-option-code">AR</span>
+
+    <span class="cv-option-info">
+        <strong data-i18n="cvArabicTitle">
+            Arabic CV
+        </strong>
+
+        <small data-i18n="cvArabicDescription">
+            Download my Arabic resume
+        </small>
+    </span>
+
+    <span class="cv-download-icon" aria-hidden="true">
+        ↓
+    </span>
+
+</a>
+                <a href="cv/Mahir-CV-TR.pdf"
+                   class="cv-option"
+                   download="Mahir-CV-TR.pdf">
+                    <span class="cv-option-code" aria-hidden="true">TR</span>
+                    <span class="cv-option-info">
+                        <strong data-i18n="cvTurkishTitle">Turkish CV</strong>
+                        <small data-i18n="cvTurkishDescription">Download my Turkish resume</small>
+                    </span>
+                    <span class="cv-download-icon" aria-hidden="true">↓</span>
+                </a>
+
+                <a href="cv/Mahir-CV-EN.pdf"
+                   class="cv-option"
+                   download="Mahir-CV-EN.pdf">
+                    <span class="cv-option-code" aria-hidden="true">EN</span>
+                    <span class="cv-option-info">
+                        <strong data-i18n="cvEnglishTitle">English CV</strong>
+                        <small data-i18n="cvEnglishDescription">Download my English resume</small>
+                    </span>
+                    <span class="cv-download-icon" aria-hidden="true">↓</span>
+                </a>
+            </div>
+        </div>
+    </dialog>
 
     <script src="js/language.js"></script>
     <script src="script.js"></script>

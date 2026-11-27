@@ -469,6 +469,47 @@
     });
 
     /* ==========================================
+       CV DOWNLOAD DIALOG
+    ========================================== */
+
+    const cvDialog = $("#cvDownloadDialog");
+    const cvOpenButton = $("#cvDownloadToggle");
+    const cvCloseButton = $("#cvDialogClose");
+
+    if (cvDialog && cvOpenButton && cvCloseButton) {
+        cvOpenButton.addEventListener("click", () => {
+            if (typeof cvDialog.showModal === "function") {
+                cvDialog.showModal();
+            } else {
+                // Fallback for browsers without native dialog support.
+                cvDialog.setAttribute("open", "");
+            }
+        });
+
+        cvCloseButton.addEventListener("click", () => {
+            if (typeof cvDialog.close === "function") {
+                cvDialog.close();
+            } else {
+                cvDialog.removeAttribute("open");
+            }
+            cvOpenButton.focus();
+        });
+
+        cvDialog.addEventListener("click", (event) => {
+            if (event.target === cvDialog) {
+                if (typeof cvDialog.close === "function") {
+                    cvDialog.close();
+                } else {
+                    cvDialog.removeAttribute("open");
+                }
+                cvOpenButton.focus();
+            }
+        });
+
+        cvDialog.addEventListener("close", () => cvOpenButton.focus());
+    }
+
+    /* ==========================================
        FOOTER YEAR
     ========================================== */
 
