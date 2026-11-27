@@ -30,9 +30,10 @@
         const meta = $('meta[name="theme-color"]');
         if (meta) meta.content = theme === "light" ? "#f5f7fb" : "#080b14";
 
+        const translate = window.portfolioI18n?.t || ((key) => key);
         themeToggle.setAttribute(
             "aria-label",
-            theme === "light" ? "Switch to dark theme" : "Switch to light theme"
+            theme === "light" ? translate("switchToDarkTheme") : translate("switchToLightTheme")
         );
 
         onThemeChange();
@@ -62,7 +63,8 @@
     function setMenu(open) {
         navLinksList.classList.toggle("open", open);
         navToggle.setAttribute("aria-expanded", String(open));
-        navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        const translate = window.portfolioI18n?.t || ((key) => key);
+        navToggle.setAttribute("aria-label", open ? translate("closeMenu") : translate("openMenu"));
     }
 
     navToggle.addEventListener("click", () => {
@@ -190,20 +192,26 @@
     ========================================== */
 
     const typingText = $("#typingText");
+    let typingGeneration = 0;
 
-    const typingWords = [
-        "Software Developer.",
-        "Python Developer.",
-        "Problem Solver.",
-        "Tech Enthusiast."
-    ];
+    function startTypingEffect() {
+        if (!typingText || reduceMotion.matches) return;
 
-    if (!reduceMotion.matches) {
+        const generation = ++typingGeneration;
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
+        typingText.textContent = "";
 
         const runTyping = () => {
+            if (generation !== typingGeneration) return;
+
+            const typingWords = window.portfolioI18n?.getTypingWords() || [
+                "Software Developer.",
+                "Python Developer.",
+                "Problem Solver.",
+                "Tech Enthusiast."
+            ];
             const word = typingWords[wordIndex];
 
             charIndex += isDeleting ? -1 : 1;
@@ -223,9 +231,31 @@
             setTimeout(runTyping, delay);
         };
 
-        typingText.textContent = "";
         runTyping();
     }
+
+    if (!reduceMotion.matches) {
+        startTypingEffect();
+    }
+
+    window.addEventListener("languageChanged", () => {
+        startTypingEffect();
+
+        const translate = window.portfolioI18n?.t || ((key) => key);
+        themeToggle.setAttribute(
+            "aria-label",
+            root.dataset.theme === "light"
+                ? translate("switchToDarkTheme")
+                : translate("switchToLightTheme")
+        );
+
+        navToggle.setAttribute(
+            "aria-label",
+            navToggle.getAttribute("aria-expanded") === "true"
+                ? translate("closeMenu")
+                : translate("openMenu")
+        );
+    });
 
     /* ==========================================
        PARTICLES (hero background)
@@ -395,7 +425,7 @@
         });
 
         if (firstInvalid) {
-            setStatus("Please fill in all fields with valid information.", "error");
+            setStatus(window.portfolioI18n.t("formValidationError"), "error");
             firstInvalid.focus();
             return;
         }
@@ -406,7 +436,7 @@
 
         if (FORM_ENDPOINT) {
             submitBtn.disabled = true;
-            setStatus("Sending...", "");
+            setStatus(window.portfolioI18n.t("formSending"), "");
 
             try {
                 const response = await fetch(FORM_ENDPOINT, {
@@ -418,19 +448,19 @@
                 if (!response.ok) throw new Error("Request failed");
 
                 form.reset();
-                setStatus("Thank you! Your message has been sent.", "success");
+                setStatus(window.portfolioI18n.t("formSuccess"), "success");
             } catch (error) {
-                setStatus("Something went wrong. Please email me directly.", "error");
+                setStatus(window.portfolioI18n.t("formError"), "error");
             } finally {
                 submitBtn.disabled = false;
             }
         } else {
             // No backend configured: open the visitor's email app
-            const subject = encodeURIComponent("Portfolio message from " + name);
+            const subject = encodeURIComponent(window.portfolioI18n.t("emailSubject") + name);
             const body = encodeURIComponent(message + "\n\n— " + name + " (" + email + ")");
 
             window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-            setStatus("Opening your email app to send the message...", "success");
+            setStatus(window.portfolioI18n.t("formOpeningEmail"), "success");
         }
     });
 

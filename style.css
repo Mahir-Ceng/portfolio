@@ -1063,3 +1063,171 @@ section h2 span {
         display: none;
     }
 }
+
+/* ------------------------------
+   LANGUAGE SELECTOR
+--------------------------------*/
+
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+}
+
+.language-switcher select {
+    min-width: 112px;
+    height: 42px;
+    padding: 0 30px 0 12px;
+    color: var(--text);
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.language-switcher select:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.language-switcher option {
+    color: var(--text);
+    background: var(--card);
+}
+
+/* The non-highlighted words in the hero heading follow the normal heading color. */
+.hero h1 .heading-normal {
+    color: var(--heading);
+    text-shadow: none;
+}
+
+/* ------------------------------
+   ARABIC / RIGHT-TO-LEFT SUPPORT
+--------------------------------*/
+
+html[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+html[dir="rtl"] .site-header,
+html[dir="rtl"] .navbar,
+html[dir="rtl"] .nav-links,
+html[dir="rtl"] .nav-actions {
+    direction: rtl;
+}
+
+html[dir="rtl"] .nav-links a.active::after {
+    right: 0;
+    left: auto;
+}
+
+html[dir="rtl"] .hero,
+html[dir="rtl"] .hero h1,
+html[dir="rtl"] .hero .description,
+html[dir="rtl"] .profile-buttons {
+    text-align: center;
+}
+
+html[dir="rtl"] .section-head,
+html[dir="rtl"] .skills-container,
+html[dir="rtl"] .site-footer {
+    text-align: center;
+}
+
+html[dir="rtl"] .about-content,
+html[dir="rtl"] .info-card,
+html[dir="rtl"] .project-card,
+html[dir="rtl"] .timeline-item,
+html[dir="rtl"] .contact-info,
+html[dir="rtl"] .contact-form {
+    text-align: right;
+}
+
+html[dir="rtl"] .timeline {
+    padding-left: 0;
+    padding-right: 34px;
+}
+
+html[dir="rtl"] .timeline::before {
+    left: auto;
+    right: 7px;
+}
+
+html[dir="rtl"] .timeline-item::before {
+    left: auto;
+    right: -34px;
+}
+
+html[dir="rtl"] .project-container {
+    text-align: right;
+}
+
+html[dir="rtl"] .project-top,
+html[dir="rtl"] .project-tech {
+    direction: rtl;
+}
+
+html[dir="rtl"] .contact-form input,
+html[dir="rtl"] .contact-form textarea {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Email addresses and code/service names should remain left-to-right. */
+.contact-item a,
+.social-links,
+.project-tech,
+.language-switcher select {
+    unicode-bidi: plaintext;
+}
+
+html[dir="rtl"] .contact-item a,
+html[dir="rtl"] .social-links a,
+html[dir="rtl"] .project-tech li {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .skip-link {
+    left: auto;
+    right: 16px;
+}
+
+html[dir="rtl"] .scroll-progress {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .back-to-top {
+    right: auto;
+    left: 24px;
+}
+
+html[dir="rtl"] .subtitle,
+html[dir="rtl"] .section-subtitle,
+html[dir="rtl"] .timeline-tag,
+html[dir="rtl"] .project-tag {
+    letter-spacing: 0;
+}
+
+html[dir="rtl"] #typingText {
+    border-right: 0;
+    border-left: 3px solid var(--accent);
+    padding-right: 0;
+    padding-left: 5px;
+}
+
+@media (max-width: 860px) {
+    html[dir="rtl"] .nav-links {
+        text-align: right;
+    }
+}
+
+@media (max-width: 600px) {
+    .language-switcher select {
+        min-width: 100px;
+    }
+}
+

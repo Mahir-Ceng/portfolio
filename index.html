@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+
+
+
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mahir-Ceng | Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Mahir, a Computer Engineering graduate passionate about software development, Python and web projects.">
+    <meta name="description" content="Portfolio of Mahir, a Computer Engineering graduate passionate about software development, Python and web projects." data-i18n-content="metaDescription">
     <meta name="author" content="Mahir-Ceng">
     <meta name="theme-color" content="#080b14">
 
     <!-- Open Graph (link previews) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Mahir-Ceng | Developer Portfolio">
-    <meta property="og:description" content="Computer Engineering graduate building creative software projects.">
+    <meta property="og:title" content="Mahir-Ceng | Developer Portfolio" data-i18n-content="documentTitle">
+    <meta property="og:description" content="Computer Engineering graduate building creative software projects." data-i18n-content="ogDescription">
 
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23080b14'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%2300e5ff'%3EM%3C/text%3E%3C/svg%3E">
+    <script type="text/javascript" nonce="59c9cdce881e4756b22e4326fce" src="//local.adguard.org?ts=1795788154608&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000f3e48210b6c9c3b27a8c9ce3%26fn%3Dindex%25281%2529.html%26cd%3Dattachment%26ts%3D498830%26p%3Dfs%26cid%3D1%26sig%3Dba9d43863c2e4b7875cb0e74cca4d91eb90e1ec267162278834a53271145742e%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="59c9cdce881e4756b22e4326fce" src="//local.adguard.org?ts=1795788154608&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23080b14'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%2300e5ff'%3EM%3C/text%3E%3C/svg%3E">
 
     <!-- Apply the saved theme before the page paints (prevents a flash) -->
     <script>
@@ -33,25 +36,34 @@
 </head>
 <body>
 
-    <a href="#main" class="skip-link">Skip to content</a>
+    <a href="#main" class="skip-link" data-i18n="skipContent">Skip to content</a>
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
     <header class="site-header">
-        <nav class="navbar" aria-label="Main navigation">
+        <nav class="navbar" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
             <a href="#home" class="logo">Mahir<span>-Ceng.</span></a>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#journey">Journey</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="navHome">Home</a></li>
+                <li><a href="#about" data-i18n="navAbout">About</a></li>
+                <li><a href="#skills" data-i18n="navSkills">Skills</a></li>
+                <li><a href="#projects" data-i18n="navProjects">Projects</a></li>
+                <li><a href="#journey" data-i18n="navJourney">Journey</a></li>
+                <li><a href="#contact" data-i18n="navContact">Contact</a></li>
             </ul>
 
             <div class="nav-actions">
+                <div class="language-switcher">
+                    <label class="visually-hidden" for="languageSelect" data-i18n="selectLanguage">Select language</label>
+                    <select id="languageSelect" aria-label="Select language" data-i18n-aria-label="selectLanguage">
+                        <option value="en">English</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
+
                 <button type="button" class="icon-btn" id="themeToggle"
-                        aria-label="Switch to light theme">
+                        aria-label="Switch to light theme" data-i18n-aria-label="switchToLightTheme">
                     <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
                         <circle cx="12" cy="12" r="4"></circle>
                         <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
@@ -62,7 +74,7 @@
                 </button>
 
                 <button type="button" class="icon-btn nav-toggle" id="navToggle"
-                        aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+                        aria-label="Open menu" data-i18n-aria-label="openMenu" aria-expanded="false" aria-controls="navLinks">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -76,28 +88,28 @@
             <canvas id="particlesCanvas" aria-hidden="true"></canvas>
 
             <div class="profile-avatar">
-                <img src="images/profile.jpg" alt="Mahir profile photo"
+                <img src="images/profile.jpg" alt="Mahir profile photo" data-i18n-alt="profilePhotoAlt"
                      width="170" height="170" decoding="async" fetchpriority="high">
             </div>
 
-            <p class="subtitle">COMPUTER ENGINEERING</p>
+            <p class="subtitle" data-i18n="computerEngineering">COMPUTER ENGINEERING</p>
 
             <h1>
-                Hi, I'm <span>Mahir.</span>
+                <span class="heading-normal" data-i18n="heroGreeting">Hi, I'm</span> <span>Mahir.</span>
                 <br>
-                Future <span id="typingText">Software Developer.</span>
+                <span class="heading-normal" data-i18n="heroFuture">Future</span> <span id="typingText" data-i18n="typingSoftware">Software Developer.</span>
             </h1>
 
-            <p class="description">
+            <p class="description" data-i18n="heroDescription">
                 I'm passionate about software development,
                 building creative projects and learning new technologies.
             </p>
 
             <div class="profile-buttons">
-                <a href="#projects" class="button">Explore My Projects →</a>
-                <a href="#contact" class="secondary-button">Contact Me</a>
+                <a href="#projects" class="button" data-i18n="exploreProjects">Explore My Projects →</a>
+                <a href="#contact" class="secondary-button" data-i18n="contactMe">Contact Me</a>
                 <!-- Put your CV at cv/Mahir-CV.pdf (or change the path) -->
-                <a href="cv/Mahir-CV.pdf" class="secondary-button" download>Download CV</a>
+                <a href="cv/Mahir-CV.pdf" class="secondary-button" download data-i18n="downloadCV">Download CV</a>
             </div>
         </section>
 
@@ -105,10 +117,10 @@
         <section id="about" class="about-section">
 
             <div class="about-content">
-                <p class="section-subtitle">GET TO KNOW ME</p>
-                <h2>About <span>Me</span></h2>
+                <p class="section-subtitle" data-i18n="aboutSubtitle">GET TO KNOW ME</p>
+                <h2><span data-i18n="aboutHeadingStart">About</span> <span data-i18n="aboutHeadingEnd">Me</span></h2>
 
-                <p class="about-text">
+                <p class="about-text" data-i18n="aboutText">
                     Hello! I'm Mahir, a Computer Engineering graduate
                     with a passion for software development.
                     I enjoy learning new technologies, solving problems
@@ -117,26 +129,26 @@
                     and build meaningful digital products.
                 </p>
 
-                <a href="#projects" class="button">Discover My Work →</a>
+                <a href="#projects" class="button" data-i18n="discoverWork">Discover My Work →</a>
             </div>
 
             <div class="about-info">
                 <div class="info-card">
                     <span class="info-number">01</span>
-                    <h3>Problem Solving</h3>
-                    <p>I enjoy analysing problems and finding solutions.</p>
+                    <h3 data-i18n="problemSolving">Problem Solving</h3>
+                    <p data-i18n="problemSolvingText">I enjoy analysing problems and finding solutions.</p>
                 </div>
 
                 <div class="info-card">
                     <span class="info-number">02</span>
-                    <h3>Continuous Learning</h3>
-                    <p>I'm always exploring new technologies.</p>
+                    <h3 data-i18n="continuousLearning">Continuous Learning</h3>
+                    <p data-i18n="continuousLearningText">I'm always exploring new technologies.</p>
                 </div>
 
                 <div class="info-card">
                     <span class="info-number">03</span>
-                    <h3>Building Projects</h3>
-                    <p>I turn what I learn into practical projects.</p>
+                    <h3 data-i18n="buildingProjects">Building Projects</h3>
+                    <p data-i18n="buildingProjectsText">I turn what I learn into practical projects.</p>
                 </div>
             </div>
 
@@ -146,9 +158,9 @@
         <section id="skills" class="skills-section">
 
             <div class="section-head">
-                <p class="section-subtitle">MY TECHNICAL SKILLS</p>
-                <h2>Skills &amp; <span>Technologies</span></h2>
-                <p class="section-intro">
+                <p class="section-subtitle" data-i18n="skillsSubtitle">MY TECHNICAL SKILLS</p>
+                <h2><span data-i18n="skillsHeadingStart">Skills &amp;</span> <span data-i18n="skillsHeadingEnd">Technologies</span></h2>
+                <p class="section-intro" data-i18n="skillsIntro">
                     Technologies I'm learning and using to build projects.
                 </p>
             </div>
@@ -161,8 +173,8 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" width="36" height="36" loading="lazy">
                     </div>
                     <h3>Python</h3>
-                    <p>Programming</p>
-                    <div class="skill-bar" style="--level: 10%" role="img" aria-label="Python level: 10 percent"><span></span></div>
+                    <p data-i18n="skillProgramming">Programming</p>
+                    <div class="skill-bar" style="--level: 10%" role="img" aria-label="Python level: 10 percent" data-i18n-aria-label="pythonLevel"><span></span></div>
                 </div>
 
                 <div class="skill-card">
@@ -170,8 +182,8 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" width="36" height="36" loading="lazy">
                     </div>
                     <h3>HTML</h3>
-                    <p>Web Structure</p>
-                    <div class="skill-bar" style="--level: 15%" role="img" aria-label="HTML level: 15 percent"><span></span></div>
+                    <p data-i18n="skillWebStructure">Web Structure</p>
+                    <div class="skill-bar" style="--level: 15%" role="img" aria-label="HTML level: 15 percent" data-i18n-aria-label="htmlLevel"><span></span></div>
                 </div>
 
                 <div class="skill-card">
@@ -179,8 +191,8 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" width="36" height="36" loading="lazy">
                     </div>
                     <h3>CSS</h3>
-                    <p>Web Design</p>
-                    <div class="skill-bar" style="--level: 15%" role="img" aria-label="CSS level: 15 percent"><span></span></div>
+                    <p data-i18n="skillWebDesign">Web Design</p>
+                    <div class="skill-bar" style="--level: 15%" role="img" aria-label="CSS level: 15 percent" data-i18n-aria-label="cssLevel"><span></span></div>
                 </div>
 
                 <div class="skill-card">
@@ -188,8 +200,8 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" width="36" height="36" loading="lazy">
                     </div>
                     <h3>JavaScript</h3>
-                    <p>Web Development</p>
-                    <div class="skill-bar" style="--level: 15%" role="img" aria-label="JavaScript level: 15 percent"><span></span></div>
+                    <p data-i18n="skillWebDevelopment">Web Development</p>
+                    <div class="skill-bar" style="--level: 15%" role="img" aria-label="JavaScript level: 15 percent" data-i18n-aria-label="javascriptLevel"><span></span></div>
                 </div>
 
                 <div class="skill-card">
@@ -197,8 +209,8 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" width="36" height="36" loading="lazy">
                     </div>
                     <h3>Git</h3>
-                    <p>Version Control</p>
-                    <div class="skill-bar" style="--level: 15%" role="img" aria-label="Git level: 15 percent"><span></span></div>
+                    <p data-i18n="skillVersionControl">Version Control</p>
+                    <div class="skill-bar" style="--level: 15%" role="img" aria-label="Git level: 15 percent" data-i18n-aria-label="gitLevel"><span></span></div>
                 </div>
 
                 <div class="skill-card">
@@ -206,8 +218,8 @@
                         <img class="invert-on-dark" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" width="36" height="36" loading="lazy">
                     </div>
                     <h3>GitHub</h3>
-                    <p>Code Hosting</p>
-                    <div class="skill-bar" style="--level: 35%" role="img" aria-label="GitHub level: 35 percent"><span></span></div>
+                    <p data-i18n="skillCodeHosting">Code Hosting</p>
+                    <div class="skill-bar" style="--level: 35%" role="img" aria-label="GitHub level: 35 percent" data-i18n-aria-label="githubLevel"><span></span></div>
                 </div>
 
             </div>
@@ -218,9 +230,9 @@
         <section id="projects" class="projects-section">
 
             <div class="section-head">
-                <p class="section-subtitle">MY RECENT WORK</p>
-                <h2>Featured <span>Projects</span></h2>
-                <p class="section-intro">Here are some of the projects I've built.</p>
+                <p class="section-subtitle" data-i18n="projectsSubtitle">MY RECENT WORK</p>
+                <h2><span data-i18n="projectsHeadingStart">Featured</span> <span data-i18n="projectsHeadingEnd">Projects</span></h2>
+                <p class="section-intro" data-i18n="projectsIntro">Here are some of the projects I've built.</p>
             </div>
 
             <div class="project-container">
@@ -231,38 +243,38 @@
                         <span class="project-number">01</span>
                     </div>
 
-                    <h3>Professional Calculator</h3>
+                    <h3 data-i18n="calculatorTitle">Professional Calculator</h3>
 
-                    <p>
+                    <p data-i18n="calculatorDescription">
                         A Python command-line calculator featuring
                         mathematical operations and calculation history.
                     </p>
 
-                    <ul class="project-tech" aria-label="Technologies used">
+                    <ul class="project-tech" aria-label="Technologies used" data-i18n-aria-label="technologiesUsed">
                         <li>Python</li>
                         <li>Git</li>
                     </ul>
 
                     <a href="https://github.com/Mahir-Ceng/professional-calculator"
                        target="_blank" rel="noopener noreferrer" class="project-link">
-                        View on GitHub →
+                        <span data-i18n="viewOnGitHub">View on GitHub →</span>
                     </a>
                 </article>
 
                 <article class="project-card">
                     <div class="project-top">
-                        <span class="project-tag">WEB DEVELOPMENT</span>
+                        <span class="project-tag" data-i18n="webDevelopmentTag">WEB DEVELOPMENT</span>
                         <span class="project-number">02</span>
                     </div>
 
-                    <h3>Personal Portfolio</h3>
+                    <h3 data-i18n="portfolioTitle">Personal Portfolio</h3>
 
-                    <p>
+                    <p data-i18n="portfolioDescription">
                         A personal developer portfolio built with
                         HTML, CSS and JavaScript.
                     </p>
 
-                    <ul class="project-tech" aria-label="Technologies used">
+                    <ul class="project-tech" aria-label="Technologies used" data-i18n-aria-label="technologiesUsed">
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JavaScript</li>
@@ -270,7 +282,7 @@
 
                     <a href="https://github.com/Mahir-Ceng/portfolio"
                        target="_blank" rel="noopener noreferrer" class="project-link">
-                        View on GitHub →
+                        <span data-i18n="viewOnGitHub">View on GitHub →</span>
                     </a>
                 </article>
 
@@ -282,34 +294,34 @@
         <section id="journey" class="journey-section">
 
             <div class="section-head">
-                <p class="section-subtitle">MY PATH SO FAR</p>
-                <h2>My <span>Journey</span></h2>
-                <p class="section-intro">The steps that shaped me as a developer.</p>
+                <p class="section-subtitle" data-i18n="journeySubtitle">MY PATH SO FAR</p>
+                <h2><span data-i18n="journeyHeadingStart">My</span> <span data-i18n="journeyHeadingEnd">Journey</span></h2>
+                <p class="section-intro" data-i18n="journeyIntro">The steps that shaped me as a developer.</p>
             </div>
 
             <ol class="timeline">
                 <li class="timeline-item">
-                    <span class="timeline-tag">GRADUATED</span>
-                    <h3>Computer Engineering degree</h3>
-                    <p>Completed my degree and built a foundation in programming, algorithms and software engineering.</p>
+                    <span class="timeline-tag" data-i18n="graduatedTag">GRADUATED</span>
+                    <h3 data-i18n="degreeTitle">Computer Engineering degree</h3>
+                    <p data-i18n="degreeDescription">Completed my degree and built a foundation in programming, algorithms and software engineering.</p>
                 </li>
 
                 <li class="timeline-item">
-                    <span class="timeline-tag">PYTHON &amp; GIT</span>
-                    <h3>First real projects</h3>
-                    <p>Built command-line tools in Python and learned to manage them with Git and GitHub.</p>
+                    <span class="timeline-tag" data-i18n="pythonGitTag">PYTHON &amp; GIT</span>
+                    <h3 data-i18n="firstProjectsTitle">First real projects</h3>
+                    <p data-i18n="firstProjectsDescription">Built command-line tools in Python and learned to manage them with Git and GitHub.</p>
                 </li>
 
                 <li class="timeline-item">
-                    <span class="timeline-tag">WEB</span>
-                    <h3>Web development</h3>
-                    <p>Learned HTML, CSS and JavaScript and created this portfolio.</p>
+                    <span class="timeline-tag" data-i18n="webTag">WEB</span>
+                    <h3 data-i18n="webJourneyTitle">Web development</h3>
+                    <p data-i18n="webJourneyDescription">Learned HTML, CSS and JavaScript and created this portfolio.</p>
                 </li>
 
                 <li class="timeline-item">
-                    <span class="timeline-tag">NEXT</span>
-                    <h3>Bigger challenges</h3>
-                    <p>Exploring larger projects, new frameworks and job opportunities in software development.</p>
+                    <span class="timeline-tag" data-i18n="nextTag">NEXT</span>
+                    <h3 data-i18n="nextTitle">Bigger challenges</h3>
+                    <p data-i18n="nextDescription">Exploring larger projects, new frameworks and job opportunities in software development.</p>
                 </li>
             </ol>
 
@@ -319,9 +331,9 @@
         <section id="contact" class="contact-section">
 
             <div class="section-head">
-                <p class="section-subtitle">GET IN TOUCH</p>
-                <h2>Let's <span>Connect</span></h2>
-                <p class="section-intro">
+                <p class="section-subtitle" data-i18n="contactSubtitle">GET IN TOUCH</p>
+                <h2><span data-i18n="contactHeadingStart">Let's</span> <span data-i18n="contactHeadingEnd">Connect</span></h2>
+                <p class="section-intro" data-i18n="contactIntro">
                     Have a project idea or an opportunity?
                     Feel free to get in touch with me.
                 </p>
@@ -330,20 +342,20 @@
             <div class="contact-container">
 
                 <div class="contact-info">
-                    <h3>Let's Talk!</h3>
+                    <h3 data-i18n="letsTalk">Let's Talk!</h3>
 
-                    <p>
+                    <p data-i18n="contactDescription">
                         I'm always open to discussing new projects,
                         creative ideas and opportunities.
                     </p>
 
                     <div class="contact-item">
-                        <span>Email</span>
+                        <span data-i18n="emailLabel">Email</span>
                         <a href="mailto:suleymanmahir52@gmail.com">suleymanmahir52@gmail.com</a>
                     </div>
 
                     <div class="contact-item">
-                        <span>GitHub</span>
+                        <span data-i18n="githubLabel">GitHub</span>
                         <a href="https://github.com/Mahir-Ceng"
                            target="_blank" rel="noopener noreferrer">
                             github.com/Mahir-Ceng
@@ -353,19 +365,19 @@
 
                 <form class="contact-form" id="contactForm" novalidate>
 
-                    <label class="visually-hidden" for="name">Your name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name"
+                    <label class="visually-hidden" for="name" data-i18n="yourName">Your name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" data-i18n-placeholder="yourName"
                            autocomplete="name" required>
 
-                    <label class="visually-hidden" for="email">Your email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email"
+                    <label class="visually-hidden" for="email" data-i18n="yourEmail">Your email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" data-i18n-placeholder="yourEmail"
                            autocomplete="email" required>
 
-                    <label class="visually-hidden" for="message">Your message</label>
-                    <textarea id="message" name="message" placeholder="Your Message"
+                    <label class="visually-hidden" for="message" data-i18n="yourMessage">Your message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" data-i18n-placeholder="yourMessage"
                               rows="5" required></textarea>
 
-                    <button type="submit" class="button" id="submitBtn">Send Message →</button>
+                    <button type="submit" class="button" id="submitBtn" data-i18n="sendMessage">Send Message →</button>
 
                     <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
 
@@ -381,21 +393,23 @@
 
         <a href="#home" class="footer-logo">Mahir<span>-Ceng.</span></a>
 
-        <p>Building my future, one line of code at a time.</p>
+        <p data-i18n="footerTagline">Building my future, one line of code at a time.</p>
 
         <div class="social-links">
             <a href="https://github.com/Mahir-Ceng" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:suleymanmahir52@gmail.com">Email</a>
+            <a href="mailto:suleymanmahir52@gmail.com" data-i18n="emailLabel">Email</a>
         </div>
 
         <div class="footer-bottom">
-            <p>© <span id="year">2026</span> Mahir-Ceng. All rights reserved.</p>
+            <p><span data-i18n="copyrightPrefix">©</span> <span id="year">2026</span> Mahir-Ceng. <span data-i18n="copyrightSuffix">All rights reserved.</span></p>
         </div>
 
     </footer>
 
-    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" data-i18n-aria-label="backToTop">↑</button>
 
+    <script src="js/language.js"></script>
     <script src="script.js"></script>
+   
 </body>
 </html>
