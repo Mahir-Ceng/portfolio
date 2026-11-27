@@ -290,8 +290,8 @@
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 size: Math.random() * 2 + 1,
-                speedX: (Math.random() - 0.5) * 5,
-                speedY: (Math.random() - 0.5) * 5,
+                speedX: (Math.random() - 0.5) * 2,
+                speedY: (Math.random() - 0.5) * 2,
             });
         }
     }
