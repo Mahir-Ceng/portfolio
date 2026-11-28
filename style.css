@@ -1437,3 +1437,47 @@ html[dir="rtl"] #typingText {
     .cv-dialog-content { padding: 35px 20px; }
     .cv-dialog h2 { font-size: 24px; }
 }
+/* Coming soon card: mobile */
+@media (max-width: 750px) {
+    .project-container {
+        row-gap: 20px; /* tek sütunda kartlar arası boşluk biraz daha rahat olsun */
+    }
+
+    .project-card--soon {
+        padding: 22px;
+    }
+
+    .project-card--soon .project-top {
+        margin-bottom: 16px;
+    }
+
+    .project-card--soon h3 {
+        font-size: 20px;
+    }
+
+    .project-card--soon p {
+        margin-bottom: 18px;
+    }
+
+    .project-card--soon .project-link {
+        padding-top: 18px;
+    }
+}
+
+@media (max-width: 450px) {
+    .project-card--soon {
+        padding: 18px;
+    }
+
+    .project-card--soon .project-tech li {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
+
+/* Dokunmatik ekranlarda kart, dokunulunca havada asılı kalmasın */
+@media (hover: none) {
+    .project-card--soon:hover {
+        --lift: 0px;
+    }
+}
