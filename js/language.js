@@ -3,6 +3,10 @@
 
     const translations = {
         en: {
+            comingSoonTag: "COMING SOON",
+comingSoonStatus: "Uploading soon ⏳",
+novaTitle: "NOVA AI Assistant",
+novaDescription: "A local, offline AI assistant with a holographic interface, voice control and computer automation.",
             cvArabicTitle: "Arabic CV",
 cvArabicDescription: "Download my Arabic resume",
             documentTitle: "Mahir-Ceng | Developer Portfolio",
@@ -120,6 +124,10 @@ cvArabicDescription: "Download my Arabic resume",
         },
 
         tr: {
+            comingSoonTag: "YAKINDA",
+comingSoonStatus: "Yakında yüklenecek ⏳",
+novaTitle: "NOVA Yapay Zekâ Asistanı",
+novaDescription: "Holografik arayüz, sesli kontrol ve bilgisayar otomasyonu sunan, internetsiz çalışabilen yerel bir yapay zekâ asistanı.",
             cvArabicTitle: "Arapça CV",
 cvArabicDescription: "Arapça özgeçmişimi indir",
             documentTitle: "Mahir-Ceng | Yazılım Geliştirici Portfolyosu",
@@ -237,6 +245,10 @@ cvArabicDescription: "Arapça özgeçmişimi indir",
         },
 
         ar: {
+            comingSoonTag: "قريبًا",
+comingSoonStatus: "سيتم الرفع قريبًا ⏳",
+novaTitle: "مساعد NOVA الذكي",
+novaDescription: "مساعد ذكاء اصطناعي محلي يعمل دون إنترنت، بواجهة هولوغرافية وتحكم صوتي وأتمتة للحاسوب.",
             cvArabicTitle: "السيرة الذاتية العربية",
 cvArabicDescription: "تحميل سيرتي الذاتية باللغة العربية",
             documentTitle: "ماهر-جينغ | معرض أعمال مطور برمجيات",
